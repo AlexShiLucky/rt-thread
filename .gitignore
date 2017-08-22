@@ -1,5 +1,7 @@
 *.pyc
 *.map
+*.objdump
+*.stackdump
 *.dblite
 *.elf
 *.bin
@@ -21,3 +23,19 @@ documentation/html
 *.a
 *.i
 *.d
+
+.tags
+.tags_sorted_by_file
+*.CF3
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PFI
+*.PO
+*.PR
+*.PRI
+*.PS
+*.WK3
+*.SearchResults
+*.si4project

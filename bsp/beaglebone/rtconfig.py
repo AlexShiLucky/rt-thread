@@ -9,11 +9,11 @@ if os.getenv('RTT_CC'):
 	CROSS_TOOL = os.getenv('RTT_CC')
 
 if  CROSS_TOOL == 'gcc':
-    PLATFORM 	= 'gcc'
-    EXEC_PATH 	= r'C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin'
+    PLATFORM = 'gcc'
+    EXEC_PATH = r'D:/toolchain/GNU_ARM_Embedded_Toolchain/bin'
 elif CROSS_TOOL == 'keil':
-    PLATFORM 	= 'armcc'
-    EXEC_PATH 	= 'C:/Keil'
+    PLATFORM = 'armcc'
+    EXEC_PATH = r'D:/Keil'
 elif CROSS_TOOL == 'iar':
     print '================ERROR============================'
     print 'Not support IAR yet!'
