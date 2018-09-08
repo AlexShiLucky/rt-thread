@@ -26,3 +26,20 @@ tools/kconfig-frontends/kconfig-mconf
 packages
 cconfig.h
 GPUCache
+
+#
+# Ignore SourceInsight files
+#
+*.CF3
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PFI
+*.PO
+*.PR
+*.PRI
+*.PS
+*.WK3
+*.SearchResults
+*.si4project

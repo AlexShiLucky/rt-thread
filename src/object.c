@@ -41,40 +41,53 @@
  */
 enum rt_object_info_type
 {
+    /* 线程对象类型 */
     RT_Object_Info_Thread = 0,                         /**< The object is a thread. */
 #ifdef RT_USING_SEMAPHORE
+    /* 信号量对象类型 */
     RT_Object_Info_Semaphore,                          /**< The object is a semaphore. */
 #endif
 #ifdef RT_USING_MUTEX
+    /* 互斥信号量对象类型 */
     RT_Object_Info_Mutex,                              /**< The object is a mutex. */
 #endif
 #ifdef RT_USING_EVENT
+    /* 事件对象类型 */
     RT_Object_Info_Event,                              /**< The object is a event. */
 #endif
 #ifdef RT_USING_MAILBOX
+    /* 邮箱对象类型 */
     RT_Object_Info_MailBox,                            /**< The object is a mail box. */
 #endif
 #ifdef RT_USING_MESSAGEQUEUE
+    /* 消息队列对象类型 */
     RT_Object_Info_MessageQueue,                       /**< The object is a message queue. */
 #endif
 #ifdef RT_USING_MEMHEAP
+    /* 内存堆对象类型 */
     RT_Object_Info_MemHeap,                            /**< The object is a memory heap */
 #endif
 #ifdef RT_USING_MEMPOOL
+    /* 内存池对象类型 */
     RT_Object_Info_MemPool,                            /**< The object is a memory pool. */
 #endif
 #ifdef RT_USING_DEVICE
+    /* 设备对象类型 */
     RT_Object_Info_Device,                             /**< The object is a device */
 #endif
+    /* 定时器对象类型 */
     RT_Object_Info_Timer,                              /**< The object is a timer. */
 #ifdef RT_USING_MODULE
+    /* 模块对象类型 */
     RT_Object_Info_Module,                             /**< The object is a module. */
 #endif
     RT_Object_Info_Unknown,                            /**< The object is unknown. */
 };
 
+/* 对象链表初始化宏 */
 #define _OBJ_CONTAINER_LIST_INIT(c)     \
     {&(rt_object_container[c].object_list), &(rt_object_container[c].object_list)}
+/* 对象哈希表 */
 static struct rt_object_information rt_object_container[RT_Object_Info_Unknown] =
 {
     /* initialize object container - thread */

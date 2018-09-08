@@ -363,18 +363,30 @@ typedef struct rt_object *rt_object_t;                  /**< Type for kernel obj
  */
 enum rt_object_class_type
 {
+    /* 线程类类型 */
     RT_Object_Class_Thread = 0,                         /**< The object is a thread. */
+    /* 信号量类类型 */
     RT_Object_Class_Semaphore,                          /**< The object is a semaphore. */
+    /* 互斥信号量类类型 */
     RT_Object_Class_Mutex,                              /**< The object is a mutex. */
+    /* 事件类类型 */
     RT_Object_Class_Event,                              /**< The object is a event. */
+    /* 邮箱类类型 */
     RT_Object_Class_MailBox,                            /**< The object is a mail box. */
+    /* 消息队列类类型 */
     RT_Object_Class_MessageQueue,                       /**< The object is a message queue. */
+    /* 内存堆类类型 */
     RT_Object_Class_MemHeap,                            /**< The object is a memory heap */
+    /* 内存池类类型 */
     RT_Object_Class_MemPool,                            /**< The object is a memory pool. */
+    /* 设备类类型 */
     RT_Object_Class_Device,                             /**< The object is a device */
+    /* 定时器类类型 */
     RT_Object_Class_Timer,                              /**< The object is a timer. */
+    /* 模块类类型 */
     RT_Object_Class_Module,                             /**< The object is a module. */
     RT_Object_Class_Unknown,                            /**< The object is unknown. */
+    /* 静态对象类型 */
     RT_Object_Class_Static = 0x80                       /**< The object is a static object. */
 };
 
