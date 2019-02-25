@@ -13,17 +13,18 @@ if os.getenv('RTT_ROOT'):
 # cross_tool provides the cross compiler
 # EXEC_PATH is the compiler execute path, for example, CodeSourcery, Keil MDK, IAR
 if  CROSS_TOOL == 'gcc':
-    PLATFORM 	= 'gcc'
-    EXEC_PATH 	= r'C:\Users\james\MentorGraphics\Sourcery_CodeBench_Lite_for_ARM_EABI\bin'
+    PLATFORM    = 'gcc'
+    EXEC_PATH   = r'/opt/toolchain/GCC_ARM_Embedded/gcc-arm-none-eabi-8-2018-q4-major/bin'
+#   EXEC_PATH   = r'D:/toolchain/GNU_Tools_ARM_Embedded/8-2018-q4-major/bin'
 elif CROSS_TOOL == 'keil':
-    PLATFORM 	= 'armcc'
-    EXEC_PATH 	= r'C:/Keil_v5'
+    PLATFORM    = 'armcc'
+    EXEC_PATH   = r'D:/Keil_v5'
 elif CROSS_TOOL == 'iar':
     PLATFORM    = 'iar'
-    EXEC_PATH   = "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.0"
+    EXEC_PATH   = r'D:/IAR/EWARMV7'
 
 if os.getenv('RTT_EXEC_PATH'):
-	EXEC_PATH = os.getenv('RTT_EXEC_PATH')
+    EXEC_PATH = os.getenv('RTT_EXEC_PATH')
 
 BUILD = 'debug'
 STM32_TYPE = 'STM32F429xx'

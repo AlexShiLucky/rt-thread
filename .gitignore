@@ -48,3 +48,8 @@ tags
 *.WK3
 *.SearchResults
 *.si4project
+
+#IAR files
+*.ewd
+*.ewt
+settings

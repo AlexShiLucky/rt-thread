@@ -9,8 +9,9 @@ if os.getenv('RTT_CC'):
     CROSS_TOOL = os.getenv('RTT_CC')
 
 if  CROSS_TOOL == 'gcc':
-    PLATFORM 	= 'gcc'
-    EXEC_PATH 	= r'C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin'
+    PLATFORM    = 'gcc'
+    EXEC_PATH   = r'/opt/toolchain/GCC_ARM_Embedded/gcc-arm-none-eabi-8-2018-q4-major/bin'
+#   EXEC_PATH   = r'D:/toolchain/GNU_Tools_ARM_Embedded/8-2018-q4-major/bin'
 
 if os.getenv('RTT_EXEC_PATH'):
     EXEC_PATH = os.getenv('RTT_EXEC_PATH')
