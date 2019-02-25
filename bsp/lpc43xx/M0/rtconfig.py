@@ -8,7 +8,7 @@ ARCH='arm'
 
 CPU = 'cortex-m0'
 
-CROSS_TOOL='keil'
+CROSS_TOOL='gcc'
 
 
 # get setting from environment.
@@ -19,13 +19,14 @@ if os.getenv('RTT_CC'):
 # EXEC_PATH is the compiler execute path, for example, CodeSourcery, Keil MDK, IAR
 if  CROSS_TOOL == 'gcc':
     PLATFORM = 'gcc'
-    EXEC_PATH = r'C:/Program Files/CodeSourcery/arm-none-eabi/bin'
+#    EXEC_PATH = r'/opt/toolchain/GCC_ARM_Embedded/gcc-arm-none-eabi-8-2018-q4-major/bin'
+    EXEC_PATH = r'D:/toolchain/GNU_Tools_ARM_Embedded/8-2018-q4-major/bin'
 elif CROSS_TOOL == 'keil':
     PLATFORM = 'armcc'
     EXEC_PATH = r'D:/Keil'
 elif CROSS_TOOL == 'iar':
     PLATFORM = 'iar'
-    EXEC_PATH = r'C:/Program Files/IAR Systems/Embedded Workbench 6.0'
+    EXEC_PATH = r'D:/IAR/EWARMV7'
 
 if os.getenv('RTT_EXEC_PATH'):
         EXEC_PATH = os.getenv('RTT_EXEC_PATH')
@@ -61,7 +62,7 @@ if PLATFORM == 'gcc':
 
     POST_ACTION = OBJCPY + ' -O binary $TARGET rtthread.bin\n' +\
                   SIZE + ' $TARGET \n' +\
-                  '../bin2C.py rtthread.bin ../M4/applications/M0_CODE.h'
+                  'python ../bin2C.py rtthread.bin ../M4/applications/M0_CODE.h'
 
 elif PLATFORM == 'armcc':
     # toolchains

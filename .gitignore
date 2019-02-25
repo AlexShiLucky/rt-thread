@@ -34,3 +34,17 @@ ncscope.*
 #ctag files
 tags
 
+#SourceInsight files
+*.CF3
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PFI
+*.PO
+*.PR
+*.PRI
+*.PS
+*.WK3
+*.SearchResults
+*.si4project

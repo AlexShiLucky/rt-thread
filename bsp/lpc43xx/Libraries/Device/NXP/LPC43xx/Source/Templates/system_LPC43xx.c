@@ -807,6 +807,7 @@ int32_t GetClkSel (uint32_t clk_src) {
 /*----------------------------------------------------------------------------
   Get clock frequency for specified clock source
  *----------------------------------------------------------------------------*/
+extern uint32_t GetPLL1Param (void);
 uint32_t GetClockFreq (uint32_t clk_src) {
   uint32_t tmp;
   uint32_t mul        =  1;

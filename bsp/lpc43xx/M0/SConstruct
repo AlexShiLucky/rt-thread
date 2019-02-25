@@ -10,7 +10,7 @@ else:
 sys.path = sys.path + [os.path.join(RTT_ROOT, 'tools')]
 from building import *
 
-TARGET = 'rtthread-lpc40xx.' + rtconfig.TARGET_EXT
+TARGET = 'build/rtthread_lpc43xx.' + rtconfig.TARGET_EXT
 
 env = Environment(tools = ['mingw'],
     AS = rtconfig.AS, ASFLAGS = rtconfig.AFLAGS,

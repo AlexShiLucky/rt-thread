@@ -26,6 +26,7 @@ Export('rtconfig')
 objs = PrepareBuilding(env, RTT_ROOT, has_libcpu=False)
 
 if rtconfig.CROSS_TOOL == 'gcc':
+    import glob
     print('build M0 code first')
     if sys.platform.startswith('linux'):
         import glob
